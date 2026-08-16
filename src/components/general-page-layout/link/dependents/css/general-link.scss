@@ -1,0 +1,49 @@
+@use "../../../../../css/variables" as *;
+@use "../../../../../css/mixins" as *;
+
+.general-link {
+  font-size: $header-6;
+  transition: color 0.2s ease;
+
+  &.primary-link {
+    color: var(--primary);
+    &:hover {
+      color: var(--secondary);
+    }
+  }
+
+  &.success-link {
+    color: var(--on-success);
+    &:hover {
+      color: var(--success);
+    }
+  }
+
+  &.warning-link {
+    color: var(--on-warning);
+    &:hover {
+      color: var(--warning);
+    }
+  }
+
+  &.error-link {
+    color: var(--on-error);
+    &:hover {
+      color: var(--error);
+    }
+  }
+
+  &.info-link {
+    color: var(--on-info);
+    &:hover {
+      color: var(--info);
+    }
+  }
+
+  &.neutral-link {
+    color: var(--on-background);
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}

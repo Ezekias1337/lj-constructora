@@ -1,0 +1,18 @@
+@use "../../css/variables" as *;
+
+.privacy-policy {
+  background-color: var(--background);
+
+  h1.page-title {
+    color: var(--primary);
+  }
+
+  .privacy-policy-wrapper {
+    color: var(--on-background);
+    padding-bottom: 80px;
+
+    h2 {
+      color: var(--primary);
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@use "sass:map";
+@use "variables";
+
+$theme-colors: (
+  light: (
+    background: variables.$neutral-100,
+    surface: variables.$neutral-200,
+    text: variables.$neutral-900,
+    primary: variables.$primary-500,
+    secondary: variables.$primary-400,
+    accent: variables.$primary-300,
+    info: variables.$info-500,
+    success: variables.$success-500,
+    warning: variables.$warning-500,
+    error: variables.$error-500,
+    on-background: variables.$neutral-900,
+    on-surface: variables.$neutral-800,
+    on-primary: variables.$neutral-100,
+    on-secondary: variables.$neutral-800,
+    on-accent: variables.$neutral-900,
+    on-info: variables.$info-100,
+    on-success: variables.$neutral-900,
+    on-warning: variables.$warning-900,
+    on-error: variables.$error-900,
+    primary-hover: variables.$primary-400,
+    secondary-hover: variables.$primary-300,
+    accent-hover: variables.$primary-500,
+    info-hover: variables.$info-400,
+    success-hover: variables.$success-300,
+    warning-hover: variables.$warning-300,
+    error-hover: variables.$error-300,
+    neutral-hover: variables.$neutral-500,
+    primary-light: variables.$primary-200,
+    primary-dark: variables.$primary-800,
+  ),
+  dark: (
+    background: variables.$neutral-800,
+    surface: variables.$neutral-700,
+    text: variables.$neutral-100,
+    primary: variables.$primary-400,
+    secondary: variables.$primary-300,
+    accent: variables.$primary-500,
+    info: variables.$info-300,
+    success: variables.$success-300,
+    warning: variables.$warning-300,
+    error: variables.$error-400,
+    on-background: variables.$neutral-100,
+    on-surface: variables.$neutral-200,
+    on-primary: variables.$primary-900,
+    on-secondary: variables.$neutral-900,
+    on-accent: variables.$neutral-900,
+    on-info: variables.$info-900,
+    on-success: variables.$success-900,
+    on-warning: variables.$warning-900,
+    on-error: variables.$error-900,
+    primary-hover: variables.$primary-300,
+    secondary-hover: variables.$primary-200,
+    accent-hover: variables.$primary-400,
+    info-hover: variables.$info-200,
+    success-hover: variables.$success-200,
+    warning-hover: variables.$warning-200,
+    error-hover: variables.$error-200,
+    neutral-hover: variables.$neutral-200,
+    primary-light: variables.$primary-200,
+    primary-dark: variables.$primary-800,
+  ),
+);
+
+@mixin theme($theme: light) {
+  $theme-map: map.get($theme-colors, $theme);
+
+  background-color: map.get($theme-map, background);
+  color: map.get($theme-map, text);
+
+  @each $key, $value in $theme-map {
+    --#{$key}: #{$value};
+  }
+}

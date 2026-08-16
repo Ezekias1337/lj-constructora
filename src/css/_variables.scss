@@ -1,0 +1,100 @@
+/* Primary */
+$primary-100: #faede6;
+$primary-200: #fbcaad;
+$primary-300: #fba774;
+$primary-400: #fc833a;
+$primary-500: #fd5f00;
+$primary-600: #ce4f03;
+$primary-700: #9e3e04;
+$primary-800: #6f2c04;
+$primary-900: #401a03;
+
+/* Success */
+$success-100: #e6faf0;
+$success-200: #adfbd4;
+$success-300: #74fbb8;
+$success-400: #3afc9c;
+$success-500: #00fd7f;
+$success-600: #03ce69;
+$success-700: #049e51;
+$success-800: #046f3a;
+$success-900: #034022;
+
+/* Warning */
+$warning-100: #faf5e6;
+$warning-200: #fbe7ad;
+$warning-300: #fbda74;
+$warning-400: #fccc3a;
+$warning-500: #fdbe00;
+$warning-600: #ce9b03;
+$warning-700: #9e7804;
+$warning-800: #6f5404;
+$warning-900: #403103;
+
+/* Error */
+$error-100: #fae6e6;
+$error-200: #fbadad;
+$error-300: #fb7474;
+$error-400: #fc3a3a;
+$error-500: #fd0000;
+$error-600: #ce0303;
+$error-700: #9e0404;
+$error-800: #6f0404;
+$error-900: #400303;
+
+/* Info */
+$info-100: #e6f0fa;
+$info-200: #add4fb;
+$info-300: #74b8fb;
+$info-400: #3a9cfc;
+$info-500: #007ffd;
+$info-600: #0369ce;
+$info-700: #04519e;
+$info-800: #043a6f;
+$info-900: #032240;
+
+/* Neutral */
+$neutral-100: #fcfcfc;
+$neutral-200: #d6d6d6;
+$neutral-300: #afafaf;
+$neutral-400: #888888;
+$neutral-500: #616161;
+$neutral-600: #494949;
+$neutral-700: #303030;
+$neutral-800: #181818;
+$neutral-900: #000000;
+
+/* Transparent black variants */
+$transparent-black-100: rgba(0, 0, 0, 0.100);
+$transparent-black-200: rgba(0, 0, 0, 0.200);
+$transparent-black-300: rgba(0, 0, 0, 0.300);
+$transparent-black-400: rgba(0, 0, 0, 0.400);
+$transparent-black-500: rgba(0, 0, 0, 0.500);
+$transparent-black-600: rgba(0, 0, 0, 0.600);
+$transparent-black-700: rgba(0, 0, 0, 0.700);
+$transparent-black-800: rgba(0, 0, 0, 0.800);
+$transparent-black-900: rgba(0, 0, 0, 0.900);
+
+/* Font sizes */
+$header-1: 53.75px;
+$header-2: 44.79px;
+$header-3: 37.32px;
+$header-4: 31.1px;
+$header-5: 25.92px;
+$header-6: 21.6px;
+$paragraph: 18px;
+$small: 15px;
+$extra-small: 12.5px;
+$font-family: "Lato", Times, sans-serif !important;
+
+$border-radius: 40px;
+$surface-border-radius: 20px;
+
+/* Shadows & glows */
+$primary-shadow: 0px 0px 5px rgba($primary-500, 1);
+$success-shadow: 0px 0px 5px rgba($success-500, 1);
+$warning-shadow: 0px 0px 5px rgba($warning-500, 1);
+$error-glow: 0px 0px 5px rgba($error-500, 1);
+$info-glow: 0px 0px 5px rgba($info-500, 1);
+$neutral-shadow: 0px 0px 5px rgba($neutral-100, 1);
+$neutral-dark-shadow: 0px 0px 5px rgba($neutral-800, 1);

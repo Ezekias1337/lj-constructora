@@ -1,0 +1,13 @@
+@use "../../../../../css/variables" as *;
+@use "../../../../../css/mixins" as *;
+
+.page-title {
+  padding: 40px 20px 80px;
+  text-align: center;
+  color: var(--primary);
+
+  &.banner-title {
+    background-color: var(--primary);
+    color: var(--on-primary);
+  }
+}

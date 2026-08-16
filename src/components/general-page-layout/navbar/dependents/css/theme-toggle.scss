@@ -1,0 +1,75 @@
+@use "../../../../../css/variables" as *;
+@use "../../../../../css/mixins" as *;
+
+div.switch-wrapper.position-relative {
+  input {
+    display: none;
+
+    &:checked ~ .switch-slider {
+      background: $neutral-700;
+      border-color: $neutral-100;
+
+      &::after {
+        transform: translateX(30px);
+        background: $neutral-100;
+      }
+    }
+  }
+  
+  
+
+  .switch-slider {
+    display: block;
+    width: 50px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 15px;
+    border: 2px solid $primary-500;
+    background: $primary-100;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: $primary-500;
+      transition: 0.3s;
+    }
+  }
+
+  .sun-icon,
+  .moon-icon {
+    position: absolute;
+    inset-block-start: 50%;
+    font-size: 1.2rem;
+    line-height: 1;
+    height: 1em;
+    width: 1em;
+    pointer-events: none;
+    transition: opacity 0.3s;
+
+    &.not-active {
+      opacity: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: 50%;
+    }
+    @media screen and (min-width: 769px) {
+      transform: translateY(-50%);
+    }
+  }
+
+  .sun-icon {
+    right: 10px;
+    color: $primary-500;
+  }
+
+  .moon-icon {
+    left: 10px;
+    color: $neutral-100;
+  }
+}

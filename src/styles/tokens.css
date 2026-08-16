@@ -1,0 +1,11 @@
+:root {
+  --bg: #1a1a1a;
+  --surface: #303030;
+  --fg: #f0f0f0;
+  --muted: #888888;
+  --border: #dbdbdb;
+  --accent: #fd5c00;
+  --success: #00fd7f;
+  --font-display: Inter, system-ui, -apple-system, 'Segoe UI', Helvetica Neue, Arial, sans-serif;
+  --font-body: Inter, system-ui, -apple-system, 'Segoe UI', Helvetica Neue, Arial, sans-serif;
+}

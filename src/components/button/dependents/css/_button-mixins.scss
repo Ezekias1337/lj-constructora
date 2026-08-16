@@ -1,0 +1,22 @@
+@use "../../../../css/mixins" as *;
+@use "../../../../css/variables" as *;
+
+@mixin button-variant(
+  $variant,
+  $bg,
+  $color,
+  $border,
+  $hover-bg,
+  $hover-shadow
+) {
+  &.#{$variant}-button {
+    background-color: var(--#{$bg});
+    color: var(--#{$color});
+    border-color: var(--#{$border});
+
+    &:hover:not(.disabled-button) {
+      background-color: var(--#{$hover-bg});
+      box-shadow: $hover-shadow;
+    }
+  }
+}
