@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://la-estrellita-sc.com/sitemap.xml
+Sitemap: https://ezekias1337.github.io/lj-constructora/sitemap.xml
