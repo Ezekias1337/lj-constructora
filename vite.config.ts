@@ -13,19 +13,18 @@ const VITE_FRONTEND_PORT_COERCED_TO_NUMBER: number = Number(
 );
 
 const configObject = {
-  plugins: [react(), TanStackRouterVite(), Sitemap({
-    hostname: 'https://ezekias1337.github.io/lj-constructora/',
-    dynamicRoutes: [
-      '/',
-      '/privacy-policy',
-      '/terms-of-service',
-    ],
-  })
-    ,],
+  base: process.env.VITE_ROUTING_URL_BASE || "/lj-constructora/",
+  plugins: [
+    react(),
+    TanStackRouterVite(),
+    Sitemap({
+      hostname: "https://ezekias1337.github.io/lj-constructora/",
+      dynamicRoutes: ["/", "/privacy-policy", "/terms-of-service"],
+    }),
+  ],
   build: {
     sourcemap: true,
   },
-  base: process.env.VITE_ROUTING_URL_BASE,
   server: {
     port: VITE_FRONTEND_PORT_COERCED_TO_NUMBER,
     host: "0.0.0.0",
