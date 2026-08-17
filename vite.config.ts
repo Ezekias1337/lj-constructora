@@ -14,11 +14,9 @@ const VITE_FRONTEND_PORT_COERCED_TO_NUMBER: number = Number(
 
 const configObject = {
   plugins: [react(), TanStackRouterVite(), Sitemap({
-    hostname: 'https://la-estrellita-sc.com',
+    hostname: 'https://ezekias1337.github.io/lj-constructora/',
     dynamicRoutes: [
       '/',
-      '/menu',
-      '/location-and-contact',
       '/privacy-policy',
       '/terms-of-service',
     ],
@@ -31,11 +29,6 @@ const configObject = {
   server: {
     port: VITE_FRONTEND_PORT_COERCED_TO_NUMBER,
     host: "0.0.0.0",
-  },
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: './src/test/setup.ts',
   },
 };
 
