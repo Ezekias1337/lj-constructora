@@ -12,8 +12,9 @@ const VITE_FRONTEND_PORT_COERCED_TO_NUMBER: number = Number(
   process.env.VITE_PORT
 );
 
-const configObject = {
-  base: process.env.VITE_ROUTING_URL_BASE || "/lj-constructora/",
+export default defineConfig(({ command }) => ({
+  // Always use '/lj-constructora/' during build, and fallback to '/' or env in dev
+  base: command === "build" ? "/lj-constructora/" : process.env.VITE_ROUTING_URL_BASE || "/",
   plugins: [
     react(),
     TanStackRouterVite(),
@@ -26,9 +27,7 @@ const configObject = {
     sourcemap: true,
   },
   server: {
-    port: VITE_FRONTEND_PORT_COERCED_TO_NUMBER,
+    port: VITE_FRONTEND_PORT_COERCED_TO_NUMBER || 5001,
     host: "0.0.0.0",
   },
-};
-
-export default defineConfig(configObject);
+}));
