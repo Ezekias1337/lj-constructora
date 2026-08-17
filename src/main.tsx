@@ -16,7 +16,7 @@ import PageNotFound from "./routes/page-not-found.lazy";
 // Create a new router instance
 const router = createRouter({
   routeTree,
-  basepath: import.meta.env.BASE_URL,
+  basepath: import.meta.env.BASE_URL || "/lj-constructora/",
   defaultNotFoundComponent: PageNotFound,
 });
 
