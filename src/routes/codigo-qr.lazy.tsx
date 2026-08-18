@@ -391,12 +391,12 @@ function PillLink({
 
 /* ---------- Social icon button ---------- */
 
-interface SocialPillProps {
+/* interface SocialPillProps {
   href: string;
   children: React.ReactNode;
   "data-od-id"?: string;
   ariaLabel: string;
-}
+} */
 
 /* function SocialPill({
   href,
