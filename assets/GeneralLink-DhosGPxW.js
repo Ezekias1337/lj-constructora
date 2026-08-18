@@ -1,0 +1,2 @@
+import{j as s,b as c}from"./index-DunFQ_gQ.js";const o=({title:r,includeBanner:n,additionalClassNames:e})=>s.jsx("h1",{className:`page-title ${e!==void 0?e:""} ${n===!0?"banner-title":""}`,children:r}),p=({text:r,url:n,openInNewTab:e,additionalClassNames:a,variant:i="primary"})=>s.jsx(c,{to:n,params:t=>t,search:t=>t,className:`general-link ${i}-link ${a!==void 0?a:""}`,target:e?"_blank":"",children:r});export{p as G,o as P};
+//# sourceMappingURL=GeneralLink-DhosGPxW.js.map
