@@ -4,7 +4,7 @@ import { createRootRoute, Outlet } from "@tanstack/react-router";
 //import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 
 // Functions, Helpers, Utils, and Hooks
-import { getLocalization } from "../helpers/localization";
+//import { getLocalization } from "../helpers/localization";
 import useAnalytics from "../hooks/useAnalytics";
 import usePageTracking from "../hooks/usePageTracking";
 import useTheme from "../hooks/useTheme";
@@ -13,7 +13,7 @@ import useDeviceLanguage from "../hooks/useDeviceLanguage";
 // Consistent Across Pages
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer"
-import ConsentBanner from "../components/consent-banner/ConsentBanner";
+//import ConsentBanner from "../components/consent-banner/ConsentBanner";
 import ScrollToTop from "../components/general-page-layout/ScrollToTop";
 
 // Constants
