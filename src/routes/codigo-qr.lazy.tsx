@@ -398,7 +398,7 @@ interface SocialPillProps {
   ariaLabel: string;
 }
 
-function SocialPill({
+/* function SocialPill({
   href,
   children,
   "data-od-id": dataOdId,
@@ -416,7 +416,7 @@ function SocialPill({
       {children}
     </a>
   );
-}
+} */
 
 /* ---------- Main route component ---------- */
 
