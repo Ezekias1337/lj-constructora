@@ -504,8 +504,8 @@ const TarjetaDigital: React.FC<TarjetaDigitalProps> = () => (
 
         {/* Ver sitio completo (secondary ghost) */}
         <PillLink
-          href="/"
-          variant="ghost"
+          href="/lj-constructora/"
+          variant="surface"
           data-od-id="pill-site"
           ariaLabel="Ver sitio completo"
         >
