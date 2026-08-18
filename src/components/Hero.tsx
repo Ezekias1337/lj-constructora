@@ -1,5 +1,5 @@
 //import { StarIcon } from './icons'
-import { Button } from "./button/Button"
+//import { Button } from "./button/Button"
 
 export interface HeroProps {}
 
@@ -25,10 +25,10 @@ export const Hero: React.FC<HeroProps> = () => {
           Llamar ahora
         </a>
       </div>
-      <p className="hero-phone" style={{marginTop: "10px"}}>
+      {/* <p className="hero-phone" style={{marginTop: "10px"}}>
         O llámanos:{' '}
         <a href="tel:+526641234567">(664) 123-4567</a>
-      </p>
+      </p> */}
     </section>
   )
 }
