@@ -21,35 +21,35 @@ const Index: React.FC = () => {
     <div className="home-page">
       <HelmetProvider>
         <Helmet>
-          <title>Home - La Estrellita</title>
+          <title>Portada - LJ Constructora</title>
           <meta
             name="description"
-            content="Taste the best of Honduras and Mexico at La Estrellita Food Truck in Greenville, SC. Fresh tacos, savory barbecue, and traditional dishes made daily."
+            content="Con 15 años de experiencia en el sector de la construcción, LJ Constructora ofrece servicios de edificación y remodelación confiables y de alta calidad, adaptados a las necesidades únicas de cada cliente."
           />
-          <link rel="canonical" href="https://la-estrellita-sc.com/" />
+          <link rel="canonical" href="https://ezekias1337.github.io/lj-constructora/" />
 
           {/* Open Graph */}
-          <meta property="og:title" content="Home - La Estrellita" />
+          <meta property="og:title" content="Portada - LJ Constructora" />
           <meta
             property="og:description"
-            content="Taste the best of Honduras and Mexico at La Estrellita Food Truck in Greenville, SC. Fresh tacos, savory barbecue, and traditional dishes made daily."
+            content="Con 15 años de experiencia en el sector de la construcción, LJ Constructora ofrece servicios de edificación y remodelación confiables y de alta calidad, adaptados a las necesidades únicas de cada cliente."
           />
-          <meta property="og:url" content="https://la-estrellita-sc.com/" />
+          <meta property="og:url" content="https://ezekias1337.github.io/lj-constructora/" />
           <meta
             property="og:image"
-            content="https://la-estrellita-sc.com/assets/logo-L6dJgA8S.webp"
+            content="https://ezekias1337.github.io/lj-constructora/assets/logo-BpM_3yw5.png"
           />
 
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Home - La Estrellita" />
+          <meta name="twitter:title" content="Portada - LJ Constructora" />
           <meta
             name="twitter:description"
-            content="Taste the best of Honduras and Mexico at La Estrellita Food Truck in Greenville, SC. Fresh tacos, savory barbecue, and traditional dishes made daily."
+            content="Con 15 años de experiencia en el sector de la construcción, LJ Constructora ofrece servicios de edificación y remodelación confiables y de alta calidad, adaptados a las necesidades únicas de cada cliente."
           />
           <meta
             name="twitter:image"
-            content="https://la-estrellita-sc.com/assets/logo-L6dJgA8S.webp"
+            content="https://ezekias1337.github.io/lj-constructora/assets/logo-BpM_3yw5.png"
           />
         </Helmet>
       </HelmetProvider>

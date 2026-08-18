@@ -1,5 +1,6 @@
 // Library Imports
 import { HelmetProvider, Helmet } from "react-helmet-async";
+import { createLazyFileRoute } from "@tanstack/react-router";
 // Components
 import { Button } from "../components/button/Button";
 // Functions, Helpers, Utils, and Hooks
@@ -45,3 +46,7 @@ const PageNotFound: React.FC = () => {
 };
 
 export default PageNotFound;
+
+export const Route = createLazyFileRoute("/$")({
+  component: PageNotFound,
+});

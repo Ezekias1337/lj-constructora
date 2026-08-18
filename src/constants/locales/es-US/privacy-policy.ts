@@ -1,10 +1,10 @@
 const privacyPolicyStrings = {
-  seoTitle: "La Estrellita | Política de Privacidad",
+  seoTitle: "LJ Constructora | Política de Privacidad",
   pageTitle: "Política de Privacidad",
   headerTitle: "Política de Privacidad",
 
   introParagraph:
-    "En La Estrellita nos comprometemos a proteger tu privacidad. Esta Política de Privacidad describe cómo recopilamos, usamos y protegemos tu información cuando visitas nuestro sitio web.",
+    "En LJ Constructora nos comprometemos a proteger tu privacidad. Esta Política de Privacidad describe cómo recopilamos, usamos y protegemos tu información cuando visitas nuestro sitio web.",
 
   analyticsParagraph:
     "Algunos datos analíticos en este sitio son recopilados y procesados por nuestro socio de desarrollo web, Code Decoded, quien puede usar estos datos para analizar el comportamiento de los visitantes en múltiples sitios web de clientes que administra. Ninguna información personalmente identificable se comparte entre los sitios web de clientes.",
@@ -27,7 +27,7 @@ const privacyPolicyStrings = {
   section3List: [
     "Proveedores de Servicios de Terceros: Podemos compartir tu información con terceros confiables que nos ayudan a operar nuestro sitio web, gestionar actividades comerciales o brindar servicios. Estos terceros están obligados contractualmente a proteger tus datos.",
     "Socio de Desarrollo Web: Datos analíticos anonimizados pueden ser compartidos y almacenados por nuestro socio de desarrollo para el seguimiento de desempeño y optimización del sitio en múltiples proyectos. Estos datos no incluyen información personal identificable.",
-    "Cumplimiento Legal: Podemos divulgar tu información cuando la ley, procedimientos legales o la protección de los derechos, propiedad o seguridad de La Estrellita u otros lo requieran.",
+    "Cumplimiento Legal: Podemos divulgar tu información cuando la ley, procedimientos legales o la protección de los derechos, propiedad o seguridad de LJ Constructora u otros lo requieran.",
   ],
 
   section4Title: "4. Tus Opciones y Controles",
@@ -49,7 +49,7 @@ const privacyPolicyStrings = {
   section7Title: "7. Contáctanos",
   section7Text:
     "Si tienes preguntas o inquietudes sobre esta Política de Privacidad o nuestras prácticas de datos, por favor contáctanos en",
-  contactEmail: " laestrellitasc@gmail.com",
+  contactEmail: " ljconstruccionmexico@gmail.com",
 
   consentText:
     "Al usar nuestro sitio web, das tu consentimiento para la recopilación, uso y divulgación de tu información como se describe en esta Política de Privacidad.",

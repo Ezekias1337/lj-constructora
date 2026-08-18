@@ -148,6 +148,6 @@ const PrivacyPolicy = () => {
   );
 };
 
-export const Route = createLazyFileRoute("/privacy-policy" as never)({
+export const Route = createLazyFileRoute("/privacy-policy")({
   component: PrivacyPolicy,
 });

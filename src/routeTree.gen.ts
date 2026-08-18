@@ -10,50 +10,87 @@
 
 import { createFileRoute } from '@tanstack/react-router'
 
-// Import Routes
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as IndexImport } from './routes/index'
+const SplatLazyRouteImport = createFileRoute('/$')()
+const CodigoQrLazyRouteImport = createFileRoute('/codigo-qr')()
+const PrivacyPolicyLazyRouteImport = createFileRoute('/privacy-policy')()
+const TermsOfServiceLazyRouteImport = createFileRoute('/terms-of-service')()
 
-// Create Virtual Routes
-
-const TermsOfServiceLazyImport = createFileRoute('/terms-of-service')()
-const PrivacyPolicyLazyImport = createFileRoute('/privacy-policy')()
-const PageNotFoundLazyImport = createFileRoute('/page-not-found')()
-
-// Create/Update Routes
-
-const TermsOfServiceLazyRoute = TermsOfServiceLazyImport.update({
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SplatLazyRoute = SplatLazyRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/$.lazy').then((d) => d.Route))
+const CodigoQrLazyRoute = CodigoQrLazyRouteImport.update({
+  id: '/codigo-qr',
+  path: '/codigo-qr',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/codigo-qr.lazy').then((d) => d.Route))
+const PrivacyPolicyLazyRoute = PrivacyPolicyLazyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() =>
+  import('./routes/privacy-policy.lazy').then((d) => d.Route),
+)
+const TermsOfServiceLazyRoute = TermsOfServiceLazyRouteImport.update({
   id: '/terms-of-service',
   path: '/terms-of-service',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any).lazy(() =>
   import('./routes/terms-of-service.lazy').then((d) => d.Route),
 )
 
-const PrivacyPolicyLazyRoute = PrivacyPolicyLazyImport.update({
-  id: '/privacy-policy',
-  path: '/privacy-policy',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() =>
-  import('./routes/privacy-policy.lazy').then((d) => d.Route),
-)
-
-const PageNotFoundLazyRoute = PageNotFoundLazyImport.update({
-  id: '/page-not-found',
-  path: '/page-not-found',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() =>
-  import('./routes/page-not-found.lazy').then((d) => d.Route),
-)
-
-const IndexRoute = IndexImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRoute,
-} as any)
-
-// Populate the FileRoutesByPath interface
+export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
+  '/$': typeof SplatLazyRoute
+  '/codigo-qr': typeof CodigoQrLazyRoute
+  '/privacy-policy': typeof PrivacyPolicyLazyRoute
+  '/terms-of-service': typeof TermsOfServiceLazyRoute
+}
+export interface FileRoutesByTo {
+  '/': typeof IndexRoute
+  '/$': typeof SplatLazyRoute
+  '/codigo-qr': typeof CodigoQrLazyRoute
+  '/privacy-policy': typeof PrivacyPolicyLazyRoute
+  '/terms-of-service': typeof TermsOfServiceLazyRoute
+}
+export interface FileRoutesById {
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/$': typeof SplatLazyRoute
+  '/codigo-qr': typeof CodigoQrLazyRoute
+  '/privacy-policy': typeof PrivacyPolicyLazyRoute
+  '/terms-of-service': typeof TermsOfServiceLazyRoute
+}
+export interface FileRouteTypes {
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths: '/' | '/$' | '/codigo-qr' | '/privacy-policy' | '/terms-of-service'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/' | '/$' | '/codigo-qr' | '/privacy-policy' | '/terms-of-service'
+  id:
+    | '__root__'
+    | '/'
+    | '/$'
+    | '/codigo-qr'
+    | '/privacy-policy'
+    | '/terms-of-service'
+  fileRoutesById: FileRoutesById
+}
+export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
+  SplatLazyRoute: typeof SplatLazyRoute
+  CodigoQrLazyRoute: typeof CodigoQrLazyRoute
+  PrivacyPolicyLazyRoute: typeof PrivacyPolicyLazyRoute
+  TermsOfServiceLazyRoute: typeof TermsOfServiceLazyRoute
+}
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
@@ -61,113 +98,47 @@ declare module '@tanstack/react-router' {
       id: '/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/page-not-found': {
-      id: '/page-not-found'
-      path: '/page-not-found'
-      fullPath: '/page-not-found'
-      preLoaderRoute: typeof PageNotFoundLazyImport
-      parentRoute: typeof rootRoute
+    '/$': {
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatLazyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/codigo-qr': {
+      id: '/codigo-qr'
+      path: '/codigo-qr'
+      fullPath: '/codigo-qr'
+      preLoaderRoute: typeof CodigoQrLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/privacy-policy': {
       id: '/privacy-policy'
       path: '/privacy-policy'
       fullPath: '/privacy-policy'
-      preLoaderRoute: typeof PrivacyPolicyLazyImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof PrivacyPolicyLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/terms-of-service': {
       id: '/terms-of-service'
       path: '/terms-of-service'
       fullPath: '/terms-of-service'
-      preLoaderRoute: typeof TermsOfServiceLazyImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof TermsOfServiceLazyRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
-}
-
-// Create and export the route tree
-
-export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/page-not-found': typeof PageNotFoundLazyRoute
-  '/privacy-policy': typeof PrivacyPolicyLazyRoute
-  '/terms-of-service': typeof TermsOfServiceLazyRoute
-}
-
-export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/page-not-found': typeof PageNotFoundLazyRoute
-  '/privacy-policy': typeof PrivacyPolicyLazyRoute
-  '/terms-of-service': typeof TermsOfServiceLazyRoute
-}
-
-export interface FileRoutesById {
-  __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/page-not-found': typeof PageNotFoundLazyRoute
-  '/privacy-policy': typeof PrivacyPolicyLazyRoute
-  '/terms-of-service': typeof TermsOfServiceLazyRoute
-}
-
-export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/page-not-found' | '/privacy-policy' | '/terms-of-service'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/page-not-found' | '/privacy-policy' | '/terms-of-service'
-  id:
-    | '__root__'
-    | '/'
-    | '/page-not-found'
-    | '/privacy-policy'
-    | '/terms-of-service'
-  fileRoutesById: FileRoutesById
-}
-
-export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  PageNotFoundLazyRoute: typeof PageNotFoundLazyRoute
-  PrivacyPolicyLazyRoute: typeof PrivacyPolicyLazyRoute
-  TermsOfServiceLazyRoute: typeof TermsOfServiceLazyRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  PageNotFoundLazyRoute: PageNotFoundLazyRoute,
+  SplatLazyRoute: SplatLazyRoute,
+  CodigoQrLazyRoute: CodigoQrLazyRoute,
   PrivacyPolicyLazyRoute: PrivacyPolicyLazyRoute,
   TermsOfServiceLazyRoute: TermsOfServiceLazyRoute,
 }
-
-export const routeTree = rootRoute
+export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-/* ROUTE_MANIFEST_START
-{
-  "routes": {
-    "__root__": {
-      "filePath": "__root.tsx",
-      "children": [
-        "/",
-        "/page-not-found",
-        "/privacy-policy",
-        "/terms-of-service"
-      ]
-    },
-    "/": {
-      "filePath": "index.tsx"
-    },
-    "/page-not-found": {
-      "filePath": "page-not-found.lazy.tsx"
-    },
-    "/privacy-policy": {
-      "filePath": "privacy-policy.lazy.tsx"
-    },
-    "/terms-of-service": {
-      "filePath": "terms-of-service.lazy.tsx"
-    }
-  }
-}
-ROUTE_MANIFEST_END */

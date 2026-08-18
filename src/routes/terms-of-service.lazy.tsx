@@ -132,6 +132,6 @@ const TermsOfService = () => {
   );
 };
 
-export const Route = createLazyFileRoute("/terms-of-service" as never)({
+export const Route = createLazyFileRoute("/terms-of-service")({
   component: TermsOfService,
 });

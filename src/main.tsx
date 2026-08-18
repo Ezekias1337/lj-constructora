@@ -11,7 +11,7 @@ import "./index.css"
 import { routeTree } from "./routeTree.gen";
 
 //404 Page
-import PageNotFound from "./routes/page-not-found.lazy";
+import PageNotFound from "./routes/$.lazy";
 
 // Create a new router instance
 const router = createRouter({

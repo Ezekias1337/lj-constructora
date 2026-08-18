@@ -1,5 +1,5 @@
 const locationAndContactStrings = {
-    seoTitle: "La Estrellita | Ubicación y Contacto",
+    seoTitle: "LJ Constructora | Ubicación y Contacto",
     pageTitle: "Ubicación y Contacto",
     callText: "Para comunicarte o hacer un pedido, llámanos al",
     contactUs: "Contáctanos",

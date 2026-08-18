@@ -1,10 +1,10 @@
 const privacyPolicyStrings = {
-  seoTitle: "La Estrellita | Privacy Policy",
+  seoTitle: "LJ Constructora | Privacy Policy",
   pageTitle: "Privacy Policy",
   headerTitle: "Privacy Policy",
 
   introParagraph:
-    "At La Estrellita, we are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and protect your information when you visit our website.",
+    "At LJ Constructora, we are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and protect your information when you visit our website.",
 
   analyticsParagraph:
     "Some analytics data on this site is collected and processed by our web development partner, Code Decoded, who may use this data to analyze visitor behavior across multiple client websites they maintain. No personally identifiable information is shared between client websites.",
@@ -27,7 +27,7 @@ const privacyPolicyStrings = {
   section3List: [
     "Third-Party Service Providers: We may share your information with trusted third parties who help us operate our website, manage business activities, or provide services to you. These parties are contractually obligated to protect your data.",
     "Web Development Partner: Anonymized analytics data may be shared with and stored by our development partner for performance tracking and website optimization across multiple projects. This data does not include personally identifiable information.",
-    "Legal Compliance: We may disclose your information when required by law, legal proceedings, or to protect the rights, property, or safety of La Estrellita or others.",
+    "Legal Compliance: We may disclose your information when required by law, legal proceedings, or to protect the rights, property, or safety of LJ Constructora or others.",
   ],
 
   section4Title: "4. Your Choices and Controls",
@@ -49,7 +49,7 @@ const privacyPolicyStrings = {
   section7Title: "7. Contact Us",
   section7Text:
     "If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at",
-  contactEmail: " laestrellitasc@gmail.com",
+  contactEmail: " ljconstruccionmexico@gmail.com",
 
   consentText:
     "By using our website, you consent to the collection, use, and disclosure of your information as described in this Privacy Policy.",
