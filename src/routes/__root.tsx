@@ -36,7 +36,7 @@ const RootComponent: React.FC = () => {
       <Outlet />
       {/* {IS_DEV === "TRUE" && <TanStackRouterDevtools />} */}
       <Footer />
-      <ConsentBanner
+      {/* <ConsentBanner
         bodyText={getLocalization("cookieBanner", "body", deviceLanguage)}
         button1={{
           text: getLocalization("cookieBanner", "accept", deviceLanguage),
@@ -48,7 +48,7 @@ const RootComponent: React.FC = () => {
           variant: "primary-outline",
           buttonSize: "small",
         }}
-      />
+      /> */}
     </>
   );
 };

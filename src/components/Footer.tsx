@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = () => {
         <div className="footer-inner">
           <div className="footer-brand">
             <h3>
-              JBH <span>Construction</span>
+              LJ <span>Constructora</span>
             </h3>
             <p>
               Servicios profesionales de construcción, remodelación y mantenimiento en Tijuana y la zona metropolitana
@@ -54,7 +54,7 @@ export const Footer: React.FC<FooterProps> = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 JBH Construction. Todos los derechos reservados.</p>
+          <p>&copy; 2024 LJ Constructora. Todos los derechos reservados.</p>
           <p>Tijuana, Baja California, México</p>
         </div>
       </div>

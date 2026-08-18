@@ -35,7 +35,7 @@ export const Navbar: React.FC = () => {
         <Button
           variant="primary"
           additionalClassNames="nav-toggle"
-          onClickHandler={() => toggleMenu}
+          onClickHandler={() => toggleMenu()}
         ></Button>
       </div>
       <div

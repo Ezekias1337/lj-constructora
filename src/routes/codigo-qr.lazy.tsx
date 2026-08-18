@@ -1,5 +1,7 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 
+import Logo from "../assets/images/logo/logo.png"
+
 /* ------------------------------------------------------------------ */
 /*  Tarjeta Digital — QR landing page (link-in-bio style)             */
 /*  Drop-in route for an existing TanStack Router + Vite + React repo */
@@ -428,13 +430,13 @@ const TarjetaDigital: React.FC<TarjetaDigitalProps> = () => (
     <div className="jbh-card" data-od-id="card">
       {/* Profile photo */}
       <div className="jbh-profile" data-od-id="profile">
-        <UserIcon />
+        <img src={Logo} style={{width: "60px"}}/>
       </div>
 
       {/* Name + verified badge */}
       <div className="jbh-name" data-od-id="name">
-        JBH <span className="jbh-accent">Construction</span>
-        <BadgeIcon />
+        LJ <span className="jbh-accent">Constructora</span>
+        {/* <BadgeIcon /> */}
       </div>
 
       {/* Tagline */}
@@ -444,7 +446,7 @@ const TarjetaDigital: React.FC<TarjetaDigitalProps> = () => (
       <div className="jbh-pills" data-od-id="pills">
         {/* WhatsApp (accent) */}
         <PillLink
-          href="https://wa.me/526640000000?text=Hola%2C%20vi%20su%20tarjeta%20y%20quiero%20informaci%C3%B3n"
+          href="https://wa.me/526641641462?text=Hola%2C%20vi%20su%20tarjeta%20y%20quiero%20informaci%C3%B3n"
           variant="accent"
           data-od-id="pill-whatsapp"
           target="_blank"
@@ -456,7 +458,7 @@ const TarjetaDigital: React.FC<TarjetaDigitalProps> = () => (
 
         {/* Call */}
         <PillLink
-          href="tel:+526640000000"
+          href="tel:+526641641462"
           variant="surface"
           data-od-id="pill-call"
           ariaLabel="Llamar ahora"
@@ -467,7 +469,7 @@ const TarjetaDigital: React.FC<TarjetaDigitalProps> = () => (
 
         {/* Email */}
         <PillLink
-          href="mailto:contacto@jbhconstruction.com"
+          href="mailto:ljconstruccionmexico@gmail.com"
           variant="surface"
           data-od-id="pill-email"
           ariaLabel="Enviar correo"
@@ -478,7 +480,7 @@ const TarjetaDigital: React.FC<TarjetaDigitalProps> = () => (
 
         {/* Facebook */}
         <PillLink
-          href="https://facebook.com/"
+          href="https://www.facebook.com/profile.php?id=61593445040956"
           variant="surface"
           data-od-id="pill-facebook"
           target="_blank"
@@ -490,7 +492,7 @@ const TarjetaDigital: React.FC<TarjetaDigitalProps> = () => (
 
         {/* Instagram */}
         <PillLink
-          href="https://instagram.com/"
+          href="https://www.instagram.com/ljconstructora/"
           variant="surface"
           data-od-id="pill-instagram"
           target="_blank"
@@ -502,7 +504,7 @@ const TarjetaDigital: React.FC<TarjetaDigitalProps> = () => (
 
         {/* Ver sitio completo (secondary ghost) */}
         <PillLink
-          href="jbh-construction-landing.html"
+          href="/"
           variant="ghost"
           data-od-id="pill-site"
           ariaLabel="Ver sitio completo"

@@ -1,4 +1,5 @@
 //import { StarIcon } from './icons'
+import { Button } from "./button/Button"
 
 export interface HeroProps {}
 
@@ -15,16 +16,16 @@ export const Hero: React.FC<HeroProps> = () => {
         Más de 10 años transformando hogares y negocios en Tijuana.
       </p>
       <div className="hero-cta-group">
-        <a href="#contacto" className="btn-primary" data-od-id="hero-cta">
+        <a href="#contacto" className="btn-primary full-width-button" data-od-id="hero-cta" style={{width: "75%"}}>
           <QuoteIcon />
           Solicitar cotización
         </a>
-        <a href="tel:+526641234567" className="btn-secondary" data-od-id="hero-phone-link">
+        <a href="tel:+526641234567" className="btn-secondary full-width-button" data-od-id="hero-phone-link" style={{width: "75%"}}>
           <PhoneIcon />
           Llamar ahora
         </a>
       </div>
-      <p className="hero-phone">
+      <p className="hero-phone" style={{marginTop: "10px"}}>
         O llámanos:{' '}
         <a href="tel:+526641234567">(664) 123-4567</a>
       </p>

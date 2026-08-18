@@ -18,7 +18,7 @@ const Index: React.FC = () => {
   //const deviceLanguage = useDeviceLanguage();
 
   return (
-    <div className="home-page">
+    <div className="home-page padding-left-and-right">
       <HelmetProvider>
         <Helmet>
           <title>Portada - LJ Constructora</title>

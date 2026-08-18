@@ -3,7 +3,7 @@ import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 // CSS
-//import "./css/styles.scss";
+import "./css/styles.scss";
 import "./styles/tokens.css"
 import "./index.css"
 
